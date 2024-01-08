@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Sign-Up</title>
+</head>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    padding-top: 1px;
+    padding-top: 20px;
+    background-color: white;
+}
+
+
+#c2, #c3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--ast-global-color-3);
+    background-color: white;
+    width: fit-content;
+    max-width: 1000px;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 0.4em 0.8em;
+    font-size: 0.87em;
+    font-weight: 500;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.593);
+}
+
+#c2 .sign-h , #c3 .login-h {
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+    color: #607d8b;
+    font-weight: 600;
+}
+
+img {
+    width: 120px;
+    padding-left: 150px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+.form-name{
+    display: flex;
+    position: relative;
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
+
+.fill-name {
+    color: #607d8b;
+    background-color: white;
+    font-size: 0.87em;
+    width: 150px;
+    height: 45px;
+    font-size: 17px;
+    padding: 3px 13px;
+    border: 2px solid #f0f0f0;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin-right: 12.5px;
+}
+
+.form-group1 {
+    position: relative;
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
+
+.form-group2 {
+    position: relative;
+    margin-bottom: 5px;
+    margin-left: 25px;
+}
+
+.fill {
+    color: #607d8b;
+    background-color: white;
+    font-size: 0.87em;
+    width: 350px;
+    height: 45px;
+    font-size: 17px;
+    padding: 3px 13px;
+    border: 2px solid #f0f0f0;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+#fill-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #78909c;
+    font-size: 15px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.error{
+    color: red;
+    margin-left: 40px;
+}
+
+#c2 button, #c3 button {
+    color: white;
+    background-color: #607d8b;
+    width: fit-content;
+    padding: 0.9em 0.8em;
+    font-size: 0.87em;
+    width: 430px;
+    height: 45px;
+    font-size: 17px;
+    padding: 3px 13px;
+    border: 2px solid #607d8b;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin: 10px auto;
+    margin-top: 40px;
+    display: block;
+}
+
+#c2 .login, #c3 .sign {
+    justify-content: center;
+    font-size: 15px;
+    color: #70789c;
+    display: flex;
+    gap: 4px;
+    margin-bottom: 30px;
+}
+
+.login2 a{
+    text-decoration: none;
+    color: skyblue;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #607d8b;
+    background-color: white;
+}
+
+.fill[type="tel"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+    margin-right: 12.5px;
+}
+
+.warning{
+    color: black;
+    background-color: rgba(168, 75, 75, 0.516);
+    width: 170px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 100px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.warning p{
+    padding-top: 8px;
+    font-size: 13px;
+}
+
+</style>
+
+
+<body>
+<div id="c2">
+    <form action="/" method="post">
+        <div class="sign-h"><h2>Signup</h2></div>
+
+       <img src="img/profile1.png" alt="">
+
+       <div class="form-name">
+            <input class="fill-name" type="name" name="FName" placeholder="First name" required>
+            <input class="fill-name" type="name" name="LName" placeholder="Last name" required>
+       </div>
+
+       <div class="form-group1">
+            <input class="fill" type="tel" name="number" placeholder="Phone Number" pattern="\d{10}" title="Please enter a 10-digit phone number" required>
+       </div>
+
+
+        <div class="form-group1">
+            <input class="fill" type="email" name="email" placeholder="👨🏻‍💻 Username or email address" required>
+        </div>
+
+        <div class="form-group2">
+            <input class="fill" type="password" name="password" placeholder="Password" required>
+        </div>
+        <% if (message) { %>
+            <div class="warning"><p><%= message %></p></div>
+            <!-- Add other customer information fields as needed -->
+        <% } %>
+        <br>
+        <button type="submit">Signup</button>
+
+        <div class="login">
+            <p class="login1">Have an account</p>
+            <p class="login2"><a href="/login">Login Now</a></p>
+        </div>
+    </form>
+    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/account.css">
+    <script src = "/javascripts/buy.js"></script>
+    <title>My Account</title>
+    <script>
+        function rateProduct(stars) {
+            const allStars = document.querySelectorAll('.star');
+            allStars.forEach(star => star.classList.remove('rated'));
+    
+            const ratedStars = document.querySelectorAll('.star:nth-child(-n+' + stars + ')');
+            ratedStars.forEach(star => star.classList.add('rated'));
+    
+            console.log(`${stars} star`);
+        }
+    </script>
+</head>
+
+<body class="body">
+  <div class="c1">
+    <header class="list">
+      <div class="i">
+        <a href="/FurnitureX"><img src="img/img.png" alt="img" /></a>
+      </div>
+      <div class="a">
+        <ul>
+          <li><a href="/products">All Product</a></li>
+          <li><a href="/sofa">Sofa</a></li>
+          <li><a href="/chair">Chair</a></li>
+          <li><a href="/tables">Table</a></li>
+        </ul>
+      </div>
+      <div class="b">
+          <ul>
+            <li class="n1"><a href="/account">My Account</a></li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    
+    <div class="container">
+      <div class="c2">
+          <div class="heading"><h2>Account Details</h2></div>
+          
+          <div class="form-name">
+              <div class="Name-box">
+                <p>First Name:</p>
+                <div class="empty-box"><%=result[0].FirstName%></div>
+              </div>
+              <div class="Name-box">
+                <p>Last Name:</p>
+                <div class="empty-box"><%=result[0].LastName%></div>
+              </div>
+              <div class="Name-box">
+                <p>Email:</p>
+                <div class="empty-box"><%=result[0].Email%></div>
+              </div>
+              <div class="Name-box">
+                <p>Phone No:</p>
+                <div class="empty-box"><%=result[0].Phone%></div>
+              </div>
+          </div>
+          
+        <button><a href="/delete">Log Out</a></button>
+      </div>
+
+    <div class="c3">
+      <h1>Your Order</h1>
+
+      <!-- Table Starts Here -->
+      <table border="1">
+          <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Order Date</th>
+              <th>Delivery Date</th>
+          </tr>
+
+          <% if(result2.length > 0) { %>
+            <% for(var i = 0; i < result2.length; i++) { %>
+                
+                <tr>
+                    <td><%- result2[i].id %></td>
+                    <td><%- result2[i].name %></td>
+                    <td><%- result3[i].email %></td>
+                    <td><%- result3[i].mno %></td>
+                </tr>
+                <% } %>
+                    <% } else{ %>
+                        <tr><td>Not have a sugle ordered yet</td></tr>
+                        <% } %>
+      </table>
+
+  </div>
+</div>
+    
+
+    
+</body>
+</html>

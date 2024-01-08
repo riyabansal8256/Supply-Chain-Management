@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/review.css">
+    <title>Review Form</title>
+    <script>
+        function rateProduct(stars) {
+            const allStars = document.querySelectorAll('.star');
+            allStars.forEach(star => star.classList.remove('rated'));
+
+            const ratedStars = document.querySelectorAll('.star:nth-child(-n+' + stars + ')');
+            ratedStars.forEach(star => star.classList.add('rated'));
+
+            document.getElementById('ratingInput').value = stars;
+        }
+
+        function submitReview() {
+            const rating = document.getElementById('ratingInput').value;
+            const reviewText = document.getElementById('reviewText').value;
+
+            const data = {
+                rating: rating,
+                reviewText: reviewText
+            };
+
+            fetch('/sub', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                alert("Review submitted!");
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert("Error submitting review");
+            });
+        }
+    </script>
+</head>
+<body class="buy-body">
+
+    <div class="container">
+        <form id="reviewForm" action="/api/storeReview" method="post">
+            <div class="review">
+                <h2>Write a Review</h2>
+                <p>Rate your experience:</p>
+                <div class="star-rating">
+                    <span class="star" onclick="rateProduct(1)">&#9733;</span>
+                    <span class="star" onclick="rateProduct(2)">&#9733;</span>
+                    <span class="star" onclick="rateProduct(3)">&#9733;</span>
+                    <span class="star" onclick="rateProduct(4)">&#9733;</span>
+                    <span class="star" onclick="rateProduct(5)">&#9733;</span>
+                </div>
+                <input type="hidden" id="ratingInput" name="rating" value="">
+                <textarea id="reviewText" placeholder="Write your review here..." name="des"></textarea>
+                <button type="button" onclick="submitReview() ">Submit Review</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

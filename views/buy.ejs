@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/products.css">
+    <link rel="stylesheet" href="/stylesheets/buy.css">
+    <script src = "/javascripts/buy.js"></script>
+    <title>Buy Order</title>
+</head>
+
+<body class="buy-body">
+  <div class="c1">
+    <header class="list">
+      <div class="i">
+        <a href="/FurnitureX"><img src="img/img.png" alt="img" /></a>
+      </div>
+      <div class="a">
+        <ul>
+          <li><a href="/products">All Product</a></li>
+          <li><a href="/sofa">Sofa</a></li>
+          <li><a href="/chair">Chair</a></li>
+          <li><a href="/tables">Table</a></li>
+        </ul>
+      </div>
+      <div class="b">
+          <ul>
+            <li><a href="/account">My Account</a></li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    
+    <div class="container">
+    <div class="buy-c2">
+      <form action="#">
+        <div class="heading"><h2>Customer Detail</h2></div>
+        
+        <div class="Name-box">
+          <div class="empty-name"><div class="empty"><%-res[0].FirstName%></div></div>
+          <div class="empty-name"><div class="empty"><%-res[0].LastName%></div></div>
+        </div>
+          
+        <div class="form-group1">
+          <div class="empty-box"><div class="empty"><%-res[0].Email%></div></div>
+        </div>
+
+        <div class="form-address">
+          <input class="fill" type="name" name="street" placeholder="House number and street name" required>
+        </div>
+
+        <div class="form-city">
+          <input class="fill-name" type="name" name="town" placeholder="Town/City" required>
+          <input class="fill-name" type="name" name="state" placeholder="State" required>
+        </div>
+
+        <div class="form-city">
+          <input class="fill-name" type="name" name="pin" placeholder="PIN Code" required>
+        </div>
+
+        
+        <div class="form-group1">
+          <div class="empty-box"><div class="empty"><%-res[0].Phone%></div></div>
+        </div>
+
+        <button type="submit"><a href="/review">Place Order</a></button>
+
+      </form> 
+    </div>
+
+    <div class="buy-c3">
+      <h1>Your Order</h1>
+      
+      <div id="order-img">
+      </div>
+    </div>
+  </div>
+        <script>
+          console.log(ID);
+        </script>  
+</body>
+</html>
