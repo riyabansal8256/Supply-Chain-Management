@@ -1,2 +1,5 @@
 # Supply-Chain-Management
-Frontend-Database-Backend
+This project on supply chain management system has been made primarily using the concepts of Database Management System. We have tried to make system in such a way that suppliers can add their products in the system at the backend process. Users will login or sign up accordingly. They will look into products; the product they want to buy will have a buy option at the right bottom corner of each order. As we click on the buy option, a login page will open where all the details of user are required and all the details for that particular product will show up. Then the user can actually buy it.
+#AIM:
+This case study aims to design and develop an efficient database for the shopping to maintain the records of various orders, user, and their maintenance of shopping products concerned with the shopping management. It also maintains the records of the amenities being provided to various rooms in various suppliers as well as serve as a complaint registering portal for the users. Hence getting rid of manual system and data redundancy which we face in the manual record.
+
