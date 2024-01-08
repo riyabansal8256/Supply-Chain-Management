@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-left: 12.35%;
+    margin-right: 12.35%;
+    font-family: "Poppins", sans-serif;
+    padding-top: 1px;
+    padding-top: 20px;
+}
+
+.c1 {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+}
+
+.list ul {
+    padding-top: 20px;
+    box-sizing: border-box;
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    font-size: 15px;
+    font-weight: 400;
+    height: 70px;
+    line-height: 27px;
+}
+
+.i {
+    padding: 10px;
+    width: 190px;
+    cursor: pointer;
+}
+
+.a {
+    width: 40%;
+    display: flex;
+    padding-left: 20px;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list ul .n1{
+    color: #607d8b;
+}
+
+.list ul .t-n1{
+    color: #607d8b;
+    margin-left: -25px;
+}
+
+.a ul:not(.n1):hover {
+    color: #607d8b;
+}
+
+.a li:not(:hover,.n1,.t-n1) {
+    background-color: initial;
+    color: initial;
+    font-weight: normal;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: #607d8b;
+}
+
+.a li.n1 a , .t-n1 a{
+    color: #607d8b;
+}
+
+.a li.n1 a, .t-n1 a:hover {
+    color: #607d8b;
+}
+
+.b {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+}
+
+.b ul:hover {
+    color: #607d8b;
+}
+
+.b li.n1 a{
+    color: #607d8b;
+}
+
+.b li.n1 a{
+    color: #607d8b;
+}
+
+.b li:not(:hover) {
+    background-color: initial;
+    color: initial;
+    font-weight: normal;
+}
+
+.a ul,
+.b ul {
+    display: flex;
+    list-style: none;
+}
+
+.img2-buy {
+    position: absolute;
+    top: 16.75em;
+    left: 15.4em;
+    color: var(--ast-global-color-3);
+    background-color: white;
+    width: fit-content;
+    border-radius: 8px;
+    padding: 0.4em 0.8em;
+    font-size: 0.87em;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: normal;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+button:hover {
+color: white;
+background-color: #607d8b;
+}
+
+.container{
+    display: flex;
+    margin-top: 50px;
+    gap: 130px;
+    margin-bottom: 70px;
+}
+
+.body{
+    max-height: 140vh;
+}
+.c2{
+      background-color: white;
+      width: fit-content;
+      max-width: 1000px;
+      height: fit-content;
+      border-radius: 10px;
+      padding: 0.4em 0.8em;
+      font-size: 0.87em;
+      font-weight: 500;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.593);
+  }
+
+.c2 .heading {
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+    color: #607d8b;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.c3{
+      color: var(--ast-global-color-3);
+      background-color: white;
+      width: fit-content;
+      max-width: 1000px;
+      height: fit-content;
+      border-radius: 20px;
+      padding: 0.4em 0.8em;
+      font-size: 0.87em;
+      font-weight: 500;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.593);
+  }
+
+  .c3 h1{
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+    color: #607d8b;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+.form-name {
+    gap: 10px;
+    
+}
+
+.Name-box{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.Name-box p{
+    padding-top: 4px;
+    font-size: 17px;
+    color: #607d8b;
+    width: 110px;
+}
+
+.empty-box{
+    color: #607d8b;
+    font-size: 16px;
+    border-color: #607d8b;
+    border-width: 2px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #f2f2f2;
+    width: 250px;
+    height: 35px;
+    padding-left: 15px;
+    padding-top: 4px;
+}
+
+table {
+    border-collapse: collapse;
+    border-color: #607d8b;
+    color: #607d8b;
+    font-size: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #607d8b;
+}
+
+th, td{
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.c2 button{
+    color: white;
+    background-color: #607d8b;
+    width: fit-content;
+    font-size: 0.87em;
+    height: 50px;
+    font-size: 17px;
+    padding: 3px 20px;
+    border: 2px solid #607d8b;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin: 10px auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: block;
+    cursor: pointer;
+}
+
+button:hover{
+    color: #607d8b;
+    background-color: white;
+}
